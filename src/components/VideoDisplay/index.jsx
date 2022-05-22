@@ -28,10 +28,10 @@ const VideoDisplay = ()=>{
     </View>
   }
 
-  return <View>
+  return <View style={{width:"100%"}}>
     <FlatList 
       data={data.data.items}      
-      renderItem={({item:{id:{videoId},snippet}})=> <VideoCard key={videoId}  thumbnail={snippet.thumbnails.medium} published={snippet.publishedAt} title={snippet.title} channelName={snippet.channelTitle}/>}
+      renderItem={({item:{id:{videoId},snippet}})=> <VideoCard thumbnail={snippet.thumbnails.medium} published={snippet.publishedAt} title={snippet.title} channelName={snippet.channelTitle}/>}
    />
     
   </View>
@@ -42,6 +42,7 @@ export default VideoDisplay
 const style  = StyleSheet.create({
     videoContainer:{
         flex: 1,
+        flexGrow:1,
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "flex-start",

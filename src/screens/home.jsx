@@ -1,5 +1,5 @@
 import React from 'react';
-import {  View, StyleSheet } from 'react-native';
+import {  View, StyleSheet, Dimensions } from 'react-native';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import VideoDisplay from '../components/VideoDisplay';
@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 8,
-    width: "100%",
-    height: "100%",
+    width: Dimensions.get('window').width,
+    alignSelf:"stretch",
   },
   title: {
     margin: 24,

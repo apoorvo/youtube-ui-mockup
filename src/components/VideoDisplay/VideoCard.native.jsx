@@ -7,14 +7,19 @@ const VideoCard = ({ thumbnail,title, channelName, published }) => {
         padding:10
     }}>
      <Image  source={{uri: thumbnail.url}}
-        style={{width: thumbnail.width, height:  thumbnail.height}} />
+        style={{width: "100%", height:thumbnail.height}} />
 
       <View style={{
-          maxWidth: thumbnail.width
+          maxWidth: "100%",
+          marginBottom:10
       }}>
-          <Text>{title}</Text>
-          <Text>{channelName}</Text>
-          <Text>{published}</Text>
+            <Text style={{fontWeight:"bold", fontSize:16,marginTop: 10, marginBottom: 10}}>{title}</Text>
+          <Text style={{
+              color:"#666962",
+              marginBottom:5
+          }}>{channelName}</Text>
+          <Text style={{color:"#666962"}}>{published}</Text>
+        
       </View>
     </View>
     )
